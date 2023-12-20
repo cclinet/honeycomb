@@ -1,4 +1,4 @@
-pub enum Object{
-STRING(String),
-LIST(Vec<String>),
+pub enum Object {
+    STRING(String),
+    LIST(Vec<String>),
 }

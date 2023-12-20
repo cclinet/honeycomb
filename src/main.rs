@@ -23,8 +23,8 @@ fn handle_client(mut stream: TcpStream) {
 fn main() -> std::io::Result<()> {
     let mut db = Db::new();
     {
-    let version: &str = env!("CARGO_PKG_VERSION");
-    db.add("__version__".to_string(), version.to_string());
+        let version: &str = env!("CARGO_PKG_VERSION");
+        db.add("__version__".to_string(), version.to_string());
     }
     let listener = TcpListener::bind("127.0.0.1:6636")?;
     for stream in listener.incoming() {
